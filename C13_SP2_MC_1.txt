@@ -1,0 +1,314 @@
+ db.restaurant.insertOne({address:{bulding:"23,acher Main",street:"marble drive",zipcode:403204},type_of_restaurant:"bakery",cuisine:["pastry","dessert"],state:"Oklahoma",grade:[{date:{$date:1212344444},grade:"A",score:2},date:{$date:1212344444},grade:"A",score:6},date:{$date:1212344444},grade:"A",score:10},date:{$date:1212344444},grade:"A",score:9},date:{$date:1212344444},grade:"B",score:14}],name:"park Bake Shop",restaurant_id:"12345"})
+restaurant_db> db.restaurant.insertOne({address:{building:"23, Acher Main",street:"marble drive",zipcode:403204},type_of_restaurant:"Bakery",cuisine:["pastry","dessert"],state:"oklahoma",grades:[{date:{$date:139304800000},grade:"A",score:2},{date:{$date:1378857600000},grade:"A",score:6},{date:{$date:1358985600000},grade:"A",score:10},{date:{$date:1322006400000},grade:"A",score:9},{date:{$date:1299715200000},grade:"B",score:14}],name:"Park Bake Shop",restaurant_id:30075445})
+{
+  acknowledged: true,
+  insertedId: ObjectId("63ac34b8e0f298ad435df100")
+}
+restaurant_db> db.restaurant.find()
+[
+  {
+    _id: ObjectId("63ac34b8e0f298ad435df100"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Bakery',
+    cuisine: [ 'pastry', 'dessert' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 14 }
+    ],
+    name: 'Park Bake Shop',
+    restaurant_id: 30075445
+  }
+]
+restaurant_db> db.restaurant.insertMany([{address:{building:"23, Acher Main",street:"marble drive",zipcode:403204},type_of_restaurant:"Italian",cuisine:["noodles","pasta"],state:"oklahoma",grades:[{date:{$date:139304800000},grade:"A",score:2},{date:{$date:1378857600000},grade:"A",score:6},{date:{$date:1358985600000},grade:"A",score:10},{date:{$date:1322006400000},grade:"A",score:9},{date:{$date:1299715200000},grade:"B",score:12}],name:"Italian Restaurant",restaurant_id:30075445},{address:{building:"23, Acher Main",street:"marble drive",zipcode:403504},type_of_restaurant:"French",cuisine:["steak","fries"],state:"oklahoma",grades:[{date:{$date:139304800000},grade:"A",score:2},{date:{$date:1378857600000},grade:"A",score:6},{date:{$date:1358985600000},grade:"A",score:10},{date:{$date:1322006400000},grade:"A",score:9},{date:{$date:1299715200000},grade:"B",score:11}],name:"French Restaurant",restaurant_id:30075445},{address:{building:"23, Acher Main",street:"marble drive",zipcode:403204},type_of_restaurant:"Bakery",cuisine:["pastry","dessert"],state:"oklahoma",grades:[{date:{$date:139304800000},grade:"A",score:2},{date:{$date:1378857600000},grade:"A",score:6},{date:{$date:1358985600000},grade:"A",score:10},{date:{$date:1322006400000},grade:"A",score:9},{date:{$date:1299715200000},grade:"B",score:14}],name:"Queen Bake Shop",restaurant_id:30075445},{address:{building:"23, Acher Main",street:"marble drive",zipcode:403204},type_of_restaurant:"Italian",cuisine:["noodles","pasta"],state:"oklahoma",grades:[{date:{$date:139304800000},grade:"A",score:2},{date:{$date:1378857600000},grade:"A",score:6},{date:{$date:1358985600000},grade:"A",score:10},{date:{$date:1322006400000},grade:"A",score:9},{date:{$date:1299715200000},grade:"B",score:12}],name:"Italian Restaurant2",restaurant_id:30075445},{address:{building:"23, Acher Main",street:"marble drive",zipcode:403554},type_of_restaurant:"French",cuisine:["steak","fries"],state:"oklahoma",grades:[{date:{$date:139304800000},grade:"A",score:2},{date:{$date:1378857600000},grade:"A",score:6},{date:{$date:1358985600000},grade:"A",score:10},{date:{$date:1322006400000},grade:"A",score:9},{date:{$date:1299715200000},grade:"B",score:11}],name:"French Restaurant2",restaurant_id:32075445},{address:{building:"23, Acher Main",street:"marble drive",zipcode:503204},type_of_restaurant:"Bakery",cuisine:["pastry","dessert"],state:"oklahoma",grades:[{date:{$date:139304800000},grade:"A",score:2},{date:{$date:1378857600000},grade:"A",score:6},{date:{$date:1358985600000},grade:"A",score:10},{date:{$date:1322006400000},grade:"A",score:9},{date:{$date:1299715200000},grade:"B",score:14}],name:"Queen Bake Shop2",restaurant_id:30075445}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("63ac3613e0f298ad435df101"),
+    '1': ObjectId("63ac3613e0f298ad435df102"),
+    '2': ObjectId("63ac3613e0f298ad435df103"),
+    '3': ObjectId("63ac3613e0f298ad435df104"),
+    '4': ObjectId("63ac3613e0f298ad435df105"),
+    '5': ObjectId("63ac3613e0f298ad435df106")
+  }
+}
+restaurant_db> db.restaurant.find()
+[
+  {
+    _id: ObjectId("63ac34b8e0f298ad435df100"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Bakery',
+    cuisine: [ 'pastry', 'dessert' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 14 }
+    ],
+    name: 'Park Bake Shop',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df101"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Italian',
+    cuisine: [ 'noodles', 'pasta' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 12 }
+    ],
+    name: 'Italian Restaurant',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df102"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403504
+    },
+    type_of_restaurant: 'French',
+    cuisine: [ 'steak', 'fries' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 11 }
+    ],
+    name: 'French Restaurant',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df103"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Bakery',
+    cuisine: [ 'pastry', 'dessert' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 14 }
+    ],
+    name: 'Queen Bake Shop',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df104"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Italian',
+    cuisine: [ 'noodles', 'pasta' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 12 }
+    ],
+    name: 'Italian Restaurant2',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df105"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403554
+    },
+    type_of_restaurant: 'French',
+    cuisine: [ 'steak', 'fries' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 11 }
+    ],
+    name: 'French Restaurant2',
+    restaurant_id: 32075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df106"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 503204
+    },
+    type_of_restaurant: 'Bakery',
+    cuisine: [ 'pastry', 'dessert' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 14 }
+    ],
+    name: 'Queen Bake Shop2',
+    restaurant_id: 30075445
+  }
+]
+restaurant_db>
+*******************************************************************************
+
+restaurant_db> db.restaurant.find({type_of_restaurant:"Bakery"})
+
+[
+  {
+    _id: ObjectId("63ac34b8e0f298ad435df100"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Bakery',
+    cuisine: [ 'pastry', 'dessert' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 14 }
+    ],
+    name: 'Park Bake Shop',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df103"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Bakery',
+    cuisine: [ 'pastry', 'dessert' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 14 }
+    ],
+    name: 'Queen Bake Shop',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df106"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 503204
+    },
+    type_of_restaurant: 'Bakery',
+    cuisine: [ 'pastry', 'dessert' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 14 }
+    ],
+    name: 'Queen Bake Shop2',
+    restaurant_id: 30075445
+  }
+]
+**********************************************************************************************
+restaurant_db> db.restaurant.find({cuisine:{$in:["noodles","pasta"]}})
+[
+  {
+    _id: ObjectId("63ac3613e0f298ad435df101"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Italian',
+    cuisine: [ 'noodles', 'pasta' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 12 }
+    ],
+    name: 'Italian Restaurant',
+    restaurant_id: 30075445
+  },
+  {
+    _id: ObjectId("63ac3613e0f298ad435df104"),
+    address: {
+      building: '23, Acher Main',
+      street: 'marble drive',
+      zipcode: 403204
+    },
+    type_of_restaurant: 'Italian',
+    cuisine: [ 'noodles', 'pasta' ],
+    state: 'oklahoma',
+    grades: [
+      { date: { '$date': 139304800000 }, grade: 'A', score: 2 },
+      { date: { '$date': 1378857600000 }, grade: 'A', score: 6 },
+      { date: { '$date': 1358985600000 }, grade: 'A', score: 10 },
+      { date: { '$date': 1322006400000 }, grade: 'A', score: 9 },
+      { date: { '$date': 1299715200000 }, grade: 'B', score: 12 }
+    ],
+    name: 'Italian Restaurant2',
+    restaurant_id: 30075445
+  }
+]
+restaurant_db>
+*****************************************************************************************
+restaurant_db> db.restaurant.aggregate([{$project:{totalSum:{$sum:"$grades.score"}}}])
+[
+  { _id: ObjectId("63ac34b8e0f298ad435df100"), totalSum: 41 },
+  { _id: ObjectId("63ac3613e0f298ad435df101"), totalSum: 39 },
+  { _id: ObjectId("63ac3613e0f298ad435df102"), totalSum: 38 },
+  { _id: ObjectId("63ac3613e0f298ad435df103"), totalSum: 41 },
+  { _id: ObjectId("63ac3613e0f298ad435df104"), totalSum: 39 },
+  { _id: ObjectId("63ac3613e0f298ad435df105"), totalSum: 38 },
+  { _id: ObjectId("63ac3613e0f298ad435df106"), totalSum: 41 }
+]
+
+***********************************************************************************************
+restaurant_db> db.restaurant.find({"grades.score":{$gt:10}}
+... db.restaurant.find({"grades.score":{$gt:10}})
+
+
+restaurant_db> db.restaurant.find({"address.zipCode":403204},{restaurant_id:1,"grades.score":1})
